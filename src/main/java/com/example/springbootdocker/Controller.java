@@ -10,10 +10,18 @@ import java.util.List;
 public class Controller {
     @Autowired
     private StateService stateService;
+    @Autowired
+    private KafkaProducer kafkaProducer;
 
     @GetMapping("/states")
     private List<State> getAllStates(){
-        return stateService.findAll();
+        var stateList = stateService.findAll();
+        sendMessage(stateList);
+        return stateList;
+    }
+
+    private void sendMessage(List<State> stateList) {
+        stateList.stream().forEach(state -> kafkaProducer.getKafkaTemplate().send("test",state.capital,state.name));
     }
 
 

@@ -6,7 +6,9 @@ import lombok.*;
 @Setter
 @ToString
 @EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 public class State {
-    private String name;
-    private String capital;
+    public String name;
+    public String capital;
 }
