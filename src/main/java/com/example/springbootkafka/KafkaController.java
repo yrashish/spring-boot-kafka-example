@@ -1,4 +1,4 @@
-package com.example.springbootdocker;
+package com.example.springbootkafka;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

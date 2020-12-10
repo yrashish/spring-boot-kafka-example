@@ -1,4 +1,4 @@
-package com.example.springbootdocker;
+package com.example.springbootkafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
